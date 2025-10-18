@@ -4,9 +4,9 @@ echo "enter the number"
 
 number=$1
 
-if [ $number -gt 10 ]
+if [ $number -ge 10 ]
 then
-    echo "$number is not greater then 10"
+    echo "$number is greater then or equal 10"
 else
-    echo "$number is greater than 10"
+    echo "$number is not greater than 10"
 fi
