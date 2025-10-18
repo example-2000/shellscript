@@ -2,17 +2,25 @@
 
 user=$(id -u)
 
+validate(){
+    if [ $1 -ne 0 ]
+    then
+        echo "Installation was failed"
+    else
+        echo "installation was successful"
+    fi
+}
+
 if [ $user -ne 0 ]
 then
     echo "please switch to root user to install mysql"
     exit 1
 fi
 
-yum remove mysql -y
+yum install docker -y
 
-if [ $? -ne 0 ]
-then
-    echo "mysql installation was not successful"
-else
-    echo "mysql installation was successful"
-fi
+validate $?
+
+yum install maven -y
+
+validate $?
