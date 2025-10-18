@@ -17,10 +17,10 @@ then
     exit 1
 fi
 
-yum install docker -y
+yum remove docker -y
 
 validate $?
 
-yum install maven -y
+yum remove maven -y
 
 validate $?
