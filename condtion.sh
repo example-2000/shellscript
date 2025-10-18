@@ -4,7 +4,7 @@ echo "enter the number"
 
 number=$1
 
-if [ $number -ge 10 ]
+if [ $number -gt 10 ]
 then
     echo "$number is not greater then 10"
 else
